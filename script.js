@@ -43,6 +43,8 @@ audio.addEventListener('timeupdate', () => {
     const newCurrentLine = document.getElementById(`line-${currentLineIndex}`);
     if (newCurrentLine) {
       newCurrentLine.classList.add('current-line');
+      // Scroll to the current line
+      newCurrentLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 });
