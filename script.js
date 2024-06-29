@@ -16,13 +16,28 @@ const parsedLyrics = lyricsText.trim().split('\n').map(line => {
   return { time: parseInt(minutes) * 60 + parseFloat(seconds), text };
 });
 
+// Display all the lyrics
+lyrics.innerHTML = parsedLyrics.map((line, index) => `
+  <div id="line-${index}" class="lyric-line">${line.text}</div>
+`).join('');
+
 audio.addEventListener('timeupdate', () => {
   const currentTime = audio.currentTime;
-  const currentLine = parsedLyrics.find((line, index) => {
+  const currentLineIndex = parsedLyrics.findIndex((line, index) => {
     const nextLine = parsedLyrics[index + 1];
     return currentTime >= line.time && (!nextLine || currentTime < nextLine.time);
   });
-  lyrics.innerHTML = currentLine ? currentLine.text : '';
+
+  if (currentLineIndex !== -1) {
+    const currentLine = document.querySelector('.current-line');
+    if (currentLine) {
+      currentLine.classList.remove('current-line');
+    }
+    const newCurrentLine = document.getElementById(`line-${currentLineIndex}`);
+    if (newCurrentLine) {
+      newCurrentLine.classList.add('current-line');
+    }
+  }
 });
 
 let mediaRecorder;

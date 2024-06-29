@@ -1,42 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  audio {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  #lyrics {
-    margin: 20px 0;
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background: #ccc;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#lyrics {
+  margin: 20px 0;
+}
+
+.lyric-line {
+  margin: 5px 0;
+}
+
+.current-line {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ccc;
+}
