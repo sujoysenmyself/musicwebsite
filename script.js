@@ -7,6 +7,13 @@ const lyricsText = `
   [00:00] Line 1 of the song lyrics
   [00:05] Line 2 of the song lyrics
   [00:10] Line 3 of the song lyrics
+  [00:15] Line 4 of the song lyrics
+  [00:20] Line 5 of the song lyrics
+  [00:25] Line 6 of the song lyrics
+  [00:30] Line 7 of the song lyrics
+  [00:35] Line 8 of the song lyrics
+  [00:40] Line 9 of the song lyrics
+  [00:45] Line 10 of the song lyrics
 `;
 
 // Parse lyrics and timings
