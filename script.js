@@ -4,16 +4,23 @@ const recordButton = document.getElementById('record');
 const stopButton = document.getElementById('stop');
 
 const lyricsText = `
-  [00:00] Line 1 of the song lyrics
-  [00:05] Line 2 of the song lyrics
-  [00:10] Line 3 of the song lyrics
-  [00:15] Line 4 of the song lyrics
-  [00:20] Line 5 of the song lyrics
-  [00:25] Line 6 of the song lyrics
-  [00:30] Line 7 of the song lyrics
-  [00:35] Line 8 of the song lyrics
-  [00:40] Line 9 of the song lyrics
-  [00:45] Line 10 of the song lyrics
+  [00:00] ..... Music .....
+  [00:32] Ho Janam Janam Ki Khoj Bataye
+  [00:39] Ram Se Chalke Ram Pe Aaye
+  [00:45] Prem Koyi Hum Aur Na Jaane
+  [00:50] Ram Se Roothe Ram Se Maane
+  [00:56] Ram Siya Ki Karun Kahaani
+  [01:04] Ek Hai Chandan Ek Hai Paani
+  [01:10] Ram Siya Ram Siya Ram Jai Jai Ram
+  [01:34] ..... Music .....
+  [02:00] Hari Anant Hari Katha Ananta
+  [02:06] Kahahin Sunahi Bahuvidhi Sab Santa
+  [02:12] Ram Ratan Dhan Jo Koyi Paaye
+  [02:18] Jeevan Bhar Ramayan Gaye
+  [02:23] Mangal Bhavan Amangal Haari 
+  [02:32] Drabahu Sudasarath Ajar Bihari 
+  [02:38] Ram Siya Ram Siya Ram Jai Jai Ram
+  [03:01] ..... Music ..... 
 `;
 
 // Parse lyrics and timings
