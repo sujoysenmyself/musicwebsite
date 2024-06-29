@@ -67,16 +67,35 @@
               <!-- Lyrics will be dynamically added here -->
             </div>
             <div class="d-flex justify-content-between">
-              <button id="record">Record</button>
-              <button id="stop">Stop</button>
+              <button id="record" class="btn btn-primary">Record</button>
+              <button id="stop" class="btn btn-secondary">Stop</button>
             </div>
           </div>
         </div>
       </div>
+      <div class="d-flex justify-content-end">
+        <button id="share" class="btn btn-success">Share</button>
+      </div>
+      
     </div>
 
+    <script>
+      document.getElementById('share').addEventListener('click', function() {
+        const shareData = {
+          title: 'Music Website',
+          text: 'Check out this amazing music website!',
+          url: window.location.href
+        };
 
-    
+        if (navigator.share) {
+          navigator.share(shareData)
+            .then(() => console.log('Successfully shared'))
+            .catch(error => console.log('Error sharing:', error));
+        } else {
+          alert('Your browser does not support the Web Share API. Here is the link: ' + window.location.href);
+        }
+      });
+    </script>
     <script src="./script.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
