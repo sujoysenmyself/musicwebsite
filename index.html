@@ -13,7 +13,7 @@
     />
 
     <title>Music Website</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
 
@@ -60,7 +60,7 @@
         <div class="card-body">
           <div class="song">
             <audio id="audio" controls>
-              <source src="./song.mp3" type="audio/mpeg" />
+              <source src="./songs/song.mp3" type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
             <div class="text-center" id="lyrics">
@@ -79,24 +79,8 @@
       
     </div>
 
-    <script>
-      document.getElementById('share').addEventListener('click', function() {
-        const shareData = {
-          title: 'Music Website',
-          text: 'Check out this amazing music website!',
-          url: window.location.href
-        };
-
-        if (navigator.share) {
-          navigator.share(shareData)
-            .then(() => console.log('Successfully shared'))
-            .catch(error => console.log('Error sharing:', error));
-        } else {
-          alert('Your browser does not support the Web Share API. Here is the link: ' + window.location.href);
-        }
-      });
-    </script>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/song_scripts/ramSiyaRam_scripts.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
