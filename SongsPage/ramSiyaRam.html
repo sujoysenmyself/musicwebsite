@@ -13,7 +13,7 @@
     />
 
     <title>Music Website</title>
-
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
 
@@ -54,13 +54,33 @@
     </nav>
     
     <div class="container">
-      <h1 class="text-center"><a href="./SongsPage/ramSiyaRam.html">Ram Siya Ram</a></h1>
+      <h1 class="text-center">Music</h1>
 
-
+      <div class="card">
+        <div class="card-body">
+          <div class="song">
+            <audio id="audio" controls>
+              <source src="../songs/song.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+            <div class="text-center" id="lyrics">
+              <!-- Lyrics will be dynamically added here -->
+            </div>
+            <div class="d-flex justify-content-between">
+              <button id="record" class="btn btn-primary">Record</button>
+              <button id="stop" class="btn btn-secondary">Stop</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button id="share" class="btn btn-success">Share</button>
+      </div>
       
     </div>
 
-
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/song_scripts/ramSiyaRam_scripts.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
