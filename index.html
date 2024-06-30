@@ -42,6 +42,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" onkeyup="filterContent()">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" onclick="clearSearch()">Clear</button>
         </form>
     </div>
 </nav>
@@ -75,6 +76,19 @@
             } else {
                 h1[i].style.display = "none";
             }
+        }
+    }
+
+    function clearSearch() {
+        var input, container, h1, i;
+        input = document.getElementById('searchInput');
+        input.value = ''; // Clear the input field
+        container = document.querySelector('.container');
+        h1 = container.getElementsByTagName('h1');
+
+        // Show all h1 elements
+        for (i = 0; i < h1.length; i++) {
+            h1[i].style.display = ""; // Reset display to default
         }
     }
 </script>
