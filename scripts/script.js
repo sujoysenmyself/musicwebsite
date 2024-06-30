@@ -1,15 +1,30 @@
-document.getElementById('share').addEventListener('click', function() {
-  const shareData = {
-    title: 'Music Website',
-    text: 'Check out this amazing music website!',
-    url: window.location.href
-  };
+function filterContent() {
+    var input, filter, container, h1, a, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    container = document.querySelector('.container');
+    h1 = container.getElementsByTagName('h1');
 
-  if (navigator.share) {
-    navigator.share(shareData)
-      .then(() => console.log('Successfully shared'))
-      .catch(error => console.log('Error sharing:', error));
-  } else {
-    alert('Your browser does not support the Web Share API. Here is the link: ' + window.location.href);
-  }
-});
+    for (i = 0; i < h1.length; i++) {
+        a = h1[i].getElementsByTagName('a')[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            h1[i].style.display = "";
+        } else {
+            h1[i].style.display = "none";
+        }
+    }
+}
+
+function clearSearch() {
+    var input, container, h1, i;
+    input = document.getElementById('searchInput');
+    input.value = ''; // Clear the input field
+    container = document.querySelector('.container');
+    h1 = container.getElementsByTagName('h1');
+
+    // Show all h1 elements
+    for (i = 0; i < h1.length; i++) {
+        h1[i].style.display = ""; // Reset display to default
+    }
+}

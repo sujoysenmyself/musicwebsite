@@ -49,8 +49,8 @@
 
 <div class="container">
     <h1 class="text-center"><a href="./ramsongs/ramSiyaRam.html">Ram Siya Ram</a></h1>
-    <h1 class="text-center"><a href="./ramsongs/hanumanChalisa.html">Hanuman Chalisa</a></h1>
-    <h1 class="text-center"><a href="./ramsongs/shivTandav.html">Shiv Tandav</a></h1>
+    <h1 class="text-center"><a href="./ramsongs/hanumanChalisa.html">Songs 2</a></h1>
+    <h1 class="text-center"><a href="./ramsongs/shivTandav.html">Songs 3</a></h1>
     <!-- Add more song links here -->
 </div>
 
@@ -60,38 +60,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-<script>
-    function filterContent() {
-        var input, filter, container, h1, a, i, txtValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
-        container = document.querySelector('.container');
-        h1 = container.getElementsByTagName('h1');
-
-        for (i = 0; i < h1.length; i++) {
-            a = h1[i].getElementsByTagName('a')[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                h1[i].style.display = "";
-            } else {
-                h1[i].style.display = "none";
-            }
-        }
-    }
-
-    function clearSearch() {
-        var input, container, h1, i;
-        input = document.getElementById('searchInput');
-        input.value = ''; // Clear the input field
-        container = document.querySelector('.container');
-        h1 = container.getElementsByTagName('h1');
-
-        // Show all h1 elements
-        for (i = 0; i < h1.length; i++) {
-            h1[i].style.display = ""; // Reset display to default
-        }
-    }
-</script>
+<script src="./scripts/script.js"></script>
 
 </body>
 </html>
